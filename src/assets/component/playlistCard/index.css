@@ -1,0 +1,27 @@
+.card {
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  min-height: 9rem;
+  background: #242424;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 8px;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 16px;
+}
+p {
+  font-size: 16px;
+}
+.button {
+  border: none;
+  padding: 8px 18px;
+  width: fit-content;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 12px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 export default function Card({ imgurl, name, description }) {
   const cardStyle = {
     width: "12rem",
@@ -19,6 +20,7 @@ export default function Card({ imgurl, name, description }) {
   const imgholder = {
     margin: "auto",
     width: "100%",
+    position: "relative",
     height: "10rem",
   };
   const headline = {
@@ -36,8 +38,17 @@ export default function Card({ imgurl, name, description }) {
     textOverflow: "ellipsis",
   };
   return (
-    <div style={cardStyle}>
+    <div style={cardStyle} className="hover">
       <div style={imgholder}>
+        <div className="circle">
+          <img
+            className="play"
+            width="25"
+            height="25"
+            src="https://img.icons8.com/ios-filled/100/play--v1.png"
+            alt="play--v1"
+          />
+        </div>
         <img style={imgStyle} src={imgurl} alt="img" />
       </div>
 

@@ -1,6 +1,7 @@
 import "./App.css";
-import Card from "./assets/card";
+import Card from "./assets/component/Card";
 import Title from "./assets/Titlename";
+import PlayListCard from "./assets/component/playlistCard";
 function App() {
   const leftButton = "<";
   const rightButton = ">";
@@ -33,7 +34,7 @@ function App() {
                   <img
                     width="25"
                     height="25"
-                    src="https://img.icons8.com/ios-filled/150/EEEEEE/search--v1.png"
+                    src="https://img.icons8.com/ios-filled/150/727272/search--v1.png"
                     alt="search--v1"
                   />
                 </div>
@@ -41,7 +42,39 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="lower-left"></div>
+          <div className="lower-left">
+            <div className="addPlayList">
+              <div className="leftPlaylist">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/fluency-systems-filled/48/727272/bursts.png"
+                  alt="bursts"
+                />
+                <h2>Your Library</h2>
+              </div>
+              <div className="rightPlaylist">
+                <img
+                  width="20"
+                  height="20"
+                  src="https://img.icons8.com/ios-glyphs/30/727272/plus-math.png"
+                  alt="plus-math"
+                />
+              </div>
+            </div>
+            <div className="playlistcards">
+              <PlayListCard
+                title="Create your first playlist"
+                sub="It's easy, we'll help you"
+                button="Create playlist"
+              />
+              <PlayListCard
+                title="Let's find some podcasts to follow"
+                sub="We'll keep you updated on new episodes"
+                button="Browse podcasts"
+              />
+            </div>
+          </div>
         </div>
         <div className="right">
           <div className="login">

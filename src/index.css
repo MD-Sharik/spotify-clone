@@ -8,7 +8,7 @@
   padding: 0;
 }
 body {
-  background: #050505;
+  background: black;
   color: aliceblue;
   font-family: spotify;
 }
@@ -45,6 +45,23 @@ body {
   height: 80%;
   background: #121212;
   border-radius: 10px;
+}
+.addPlayList {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.leftPlaylist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 12px;
+  font-weight: 200;
+  color: #727272;
 }
 .right {
   background: linear-gradient(#292929 0%, #121212 50%);
@@ -97,6 +114,9 @@ body {
   align-items: center;
   gap: 1.2rem;
   font-size: 15px;
+}
+#searchT {
+  color: #727272;
 }
 .homesearch {
   height: 100%;
