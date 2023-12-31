@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-export default function Card({ imgurl, name, description }) {
+export default function Card({ imgurl, name, description, link }) {
   const cardStyle = {
     width: "12rem",
     height: "16rem",
@@ -40,7 +40,13 @@ export default function Card({ imgurl, name, description }) {
   return (
     <div style={cardStyle} className="hover">
       <div style={imgholder}>
-        <div className="circle">
+        <div
+          className="circle"
+          onClick={() => {
+            const audio = new Audio(link);
+            audio.play();
+          }}
+        >
           <img
             className="play"
             width="25"

@@ -78,7 +78,7 @@ body {
   margin: auto;
   height: 7%;
   margin-bottom: 5px;
-  background: #0c0c0c;
+  background: linear-gradient(#101010 0%, #101010 100%);
 }
 .Navbutton {
   display: flex;
@@ -88,7 +88,7 @@ body {
 }
 .leftbut,
 .rightbut {
-  background-color: black;
+  position: relative;
   width: 2.5rem;
   height: 2.5rem;
   font-size: 2rem;
@@ -140,9 +140,9 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-basis: 2rem;
-  gap: 1.5rem;
+  /* gap: 0.9rem; */
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 98%;
   margin: auto;
   margin-bottom: 5rem;
@@ -162,6 +162,11 @@ body {
   font-size: 0.7rem;
   font-family: "Poppins", sans-serif;
   color: #727272;
+  cursor: pointer;
+}
+#register:hover {
+  scale: 1.04;
+  color: white;
 }
 #login button {
   font-size: 0.9rem;

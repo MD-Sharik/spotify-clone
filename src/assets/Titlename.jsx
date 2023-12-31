@@ -2,7 +2,6 @@ import React from "react";
 
 export default function Title({ titleName }) {
   const titleDivStyle = {
-    fontSize: "1rem",
     display: "flex",
     justifyContent: "space-Between",
     color: "white",
@@ -21,7 +20,7 @@ export default function Title({ titleName }) {
   };
   return (
     <div style={titleDivStyle}>
-      <h2>{titleName}</h2>
+      <h2 style={{ fontSize: "1.5rem" }}>{titleName}</h2>
       <button style={buttonStyle}>Show all</button>
     </div>
   );
