@@ -4,6 +4,7 @@ import Title from "./assets/Titlename";
 import PlayListCard from "./assets/component/playlistCard";
 import Button from "./assets/component/Buttons/Index";
 import PlayScreen from "./assets/component/playScreen/Index";
+import PlayAudio from "./assets/component/playbar/Index";
 
 function App() {
   return (
@@ -227,6 +228,7 @@ function App() {
               description="bell"
             />
           </div>
+          <PlayAudio></PlayAudio>
         </div>
       </div>
       <div className="loginBanner">
