@@ -1,0 +1,28 @@
+.titleDivStyle {
+  display: flex;
+  justify-content: space-Between;
+  color: white;
+  width: 95%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  align-items: baseline;
+}
+.buttonStyle {
+  font-size: 1rem;
+  color: grey;
+  border: none;
+  text-decoration: underline;
+  background-color: transparent !important;
+  cursor: pointer;
+}
+.title {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 808px) {
+  .titleDivStyle {
+    margin-bottom: 0.5rem;
+    align-items: baseline;
+  }
+}

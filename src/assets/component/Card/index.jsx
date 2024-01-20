@@ -1,14 +1,6 @@
 import React from "react";
 import "./index.css";
 export default function Card({ imgurl, name, description, link }) {
-  const cardStyle = {
-    width: "12rem",
-    height: "16rem",
-    background: "linear-gradient(180deg, #1f1f1f 0%, #1E1E1E 50%)",
-    borderRadius: "10px",
-    padding: "10px",
-    cursor: "pointer",
-  };
   const imgStyle = {
     height: "10rem",
     width: "100%",
@@ -38,8 +30,8 @@ export default function Card({ imgurl, name, description, link }) {
     textOverflow: "ellipsis",
   };
   return (
-    <div style={cardStyle} className="hover">
-      <div style={imgholder}>
+    <div className="hover cardStyle">
+      <div className="imgholder">
         <div
           className="circle"
           onClick={() => {
@@ -55,11 +47,11 @@ export default function Card({ imgurl, name, description, link }) {
             alt="play--v1"
           />
         </div>
-        <img style={imgStyle} src={imgurl} alt="img" />
+        <img className="imgStyle" src={imgurl} alt="img" />
       </div>
 
-      <h2 style={headline}>{name}</h2>
-      <p style={descript}>{description}</p>
+      <h2 className="headline">{name}</h2>
+      <p className="descript">{description}</p>
     </div>
   );
 }

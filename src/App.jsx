@@ -1,10 +1,9 @@
 import "./App.css";
 import Card from "./assets/component/Card";
-import Title from "./assets/Titlename";
+import Title from "./assets/component/Title/Titlename";
 import PlayListCard from "./assets/component/playlistCard";
 import Button from "./assets/component/Buttons/Index";
-import PlayScreen from "./assets/component/playScreen/Index";
-import PlayAudio from "./assets/component/playbar/Index";
+import Footer from "./assets/component/Footer/Footer";
 
 function App() {
   return (
@@ -15,8 +14,14 @@ function App() {
             <div className="homesearch">
               <div className="logo">
                 <img
+                  id="logo1"
                   src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
                   alt=""
+                />
+                <img
+                  id="logo2"
+                  src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spotify-white-icon.png"
+                  alt="home"
                 />
               </div>
               <div id="home">
@@ -32,7 +37,6 @@ function App() {
               </div>
               <div id="Search">
                 <div id="searchL">
-                  {" "}
                   <img
                     width="25"
                     height="25"
@@ -53,7 +57,7 @@ function App() {
                   src="https://img.icons8.com/fluency-systems-filled/48/727272/bursts.png"
                   alt="bursts"
                 />
-                <h2>Your Library</h2>
+                <h2 className="yourlib">Your Library</h2>
               </div>
               <div className="rightPlaylist">
                 <img
@@ -133,104 +137,112 @@ function App() {
               </div>
             </div>
           </div>
-          <Title titleName="Spotify Popular" />
-          <div className="firstrow">
-            <Card
-              imgurl="https://c.saavncdn.com/092/ANIMAL-Hindi-2023-20231124191036-500x500.jpg"
-              name="Pehle Bhi Main"
-              description="Vishal Mishra"
-              link="https://pagalnew.com/download128/44540"
-            />
-            <Card
-              imgurl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
-              name="Tu Hain Kahan"
-              description="Ahad Khan, Usama Ali, Raffey Anwar"
-              link="https://pagalnew.com/download128/44225"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
-              name="Satranga"
-              description="Arijit Singh, Shreyas Puranik"
-              link="https://pagalnew.com/download128/44104"
-            />
-            <Card
-              imgurl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
-              name="Arjan Vaily"
-              description="Bhupinder Babbal | animal"
-              link="https://pagalnew.com/download128/44477"
-            />
-            <Card
-              imgurl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
-              name="Husn"
-              link="https://pagalnew.com/download128/44724"
-              description="Anuv Jain"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg"
-              name="Chaleya"
-              description="Arijit Singh, Shilpa Rao"
-              link="https://pagalnew.com/download128/43094"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
-              name="Zihaal e Miskin"
-              description="Vishal Mishra - Shreya Ghoshal"
-              link="https://pagalnew.com/download128/42136"
-            />
-            <Card
-              imgurl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
-              name="Heeriye"
-              description="lorem ipsuim aoskdna,smd;lk aks;as"
-            />
-          </div>
-          <Title titleName="For You" />
-          <div className="firstrow">
-            <Card
-              imgurl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
-              name="Heeriye"
-              description="lorem ipsuim aoskdna,smd;lk aks;as"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
-              name="Zihaal e Miskin"
-              description="Vishal Mishra - Shreya Ghoshal"
-              link="https://pagalnew.com/download128/42136"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg"
-              name="jingle bell"
-              description="bell"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/092/ANIMAL-Hindi-2023-20231124191036-500x500.jpg"
-              name="Pehle Bhi Main"
-              description="lorem ipsuim aoskdna,smd;lk aks;as"
-            />
-            <Card
-              imgurl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
-              name="Tu Hain Kahan"
-              description="bell"
-            />
-            <Card
-              imgurl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
-              name="Arjan Vaily"
-              description="bell"
-            />
-            <Card
-              imgurl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
-              name="Satranga"
-              description="bell"
-            />
+          <div className="content">
+            <Title titleName="Spotify Popular" />
+            <div className="firstrow">
+              <Card
+                imgurl="https://c.saavncdn.com/092/ANIMAL-Hindi-2023-20231124191036-500x500.jpg"
+                name="Pehle Bhi Main"
+                description="Vishal Mishra"
+                link="https://pagalnew.com/download128/44540"
+              />
+              <Card
+                imgurl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
+                name="Tu Hain Kahan"
+                description="Ahad Khan, Usama Ali, Raffey Anwar"
+                link="https://pagalnew.com/download128/44225"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
+                name="Satranga"
+                description="Arijit Singh, Shreyas Puranik"
+                link="https://pagalnew.com/download128/44104"
+              />
+              <Card
+                imgurl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
+                name="Arjan Vaily"
+                description="Bhupinder Babbal | animal"
+                link="https://pagalnew.com/download128/44477"
+              />
+              <Card
+                imgurl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
+                name="Husn"
+                link="https://pagalnew.com/download128/44724"
+                description="Anuv Jain"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg"
+                name="Chaleya"
+                description="Arijit Singh, Shilpa Rao"
+                link="https://pagalnew.com/download128/43094"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
+                name="Zihaal e Miskin"
+                description="Vishal Mishra - Shreya Ghoshal"
+                link="https://pagalnew.com/download128/42136"
+              />
+              <Card
+                imgurl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
+                name="Heeriye"
+                description="lorem ipsuim aoskdna,smd;lk aks;as"
+              />
+            </div>
+            <Title titleName="For You" />
+            <div className="firstrow">
+              <Card
+                imgurl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
+                name="Heeriye"
+                description="lorem ipsuim aoskdna,smd;lk aks;as"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
+                name="Zihaal e Miskin"
+                description="Vishal Mishra - Shreya Ghoshal"
+                link="https://pagalnew.com/download128/42136"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg"
+                name="jingle bell"
+                description="bell"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/092/ANIMAL-Hindi-2023-20231124191036-500x500.jpg"
+                name="Pehle Bhi Main"
+                description="lorem ipsuim aoskdna,smd;lk aks;as"
+              />
+              <Card
+                imgurl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
+                name="Tu Hain Kahan"
+                description="bell"
+              />
+              <Card
+                imgurl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
+                name="Arjan Vaily"
+                description="bell"
+              />
+              <Card
+                imgurl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
+                name="Satranga"
+                description="bell"
+              />
 
-            <Card
-              imgurl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
-              name="Husn"
-              description="bell"
-            />
+              <Card
+                imgurl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
+                name="Husn"
+                description="bell"
+              />
+            </div>
           </div>
-          <PlayAudio></PlayAudio>
+          <div id="mediaplayer">
+            <footer id="playbar">
+              <div className="nameart"></div>
+              <div className="slider"></div>
+            </footer>
+          </div>
         </div>
       </div>
+
       <div className="loginBanner">
         <div className="left-down">
           <h5>PREVIEW OF SPOTIFY</h5>
