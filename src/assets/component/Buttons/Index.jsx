@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./Style.css";
 export default function Button({ title }) {
   return (
     <div>
