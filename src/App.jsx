@@ -3,7 +3,6 @@ import Card from "./assets/component/Card";
 import Title from "./assets/component/Title/Titlename";
 import PlayListCard from "./assets/component/playlistCard";
 import Button from "./assets/component/Buttons/Index";
-import Footer from "./assets/component/Footer/Footer";
 
 function App() {
   return (
