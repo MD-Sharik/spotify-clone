@@ -3,6 +3,7 @@ import Card from "./assets/component/Card";
 import Title from "./assets/component/Title/Titlename";
 import PlayListCard from "./assets/component/playlistCard";
 import Button from "./assets/component/Buttons/Index";
+import ListView from "./assets/component/ListView/Listview";
 
 function App() {
   return (
@@ -136,6 +137,56 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="listContent">
+            <ListView
+              imgUrl="https://c.saavncdn.com/092/ANIMAL-Hindi-2023-20231124191036-500x500.jpg"
+              Title="Pehle Bhi Main"
+              desc="Vishal Mishra"
+              link="https://pagalnew.com/download128/44540"
+            />
+            <ListView
+              imgUrl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
+              Title="Tu Hain Kahan"
+              desc="Ahad Khan, Usama Ali, Raffey Anwar"
+              link="https://pagalnew.com/download128/44225"
+            />
+            <ListView
+              imgUrl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
+              Title="Satranga"
+              desc="Arijit Singh, Shreyas Puranik"
+              link="https://pagalnew.com/download128/44104"
+            />
+            <ListView
+              imgUrl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
+              Title="Arjan Vaily"
+              desc="Bhupinder Babbal | animal"
+              link="https://pagalnew.com/download128/44477"
+            />
+            <ListView
+              imgUrl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
+              Title="Husn"
+              link="https://pagalnew.com/download128/44724"
+              desc="Anuv Jain"
+            />
+            <ListView
+              imgUrl="https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg"
+              Title="Chaleya"
+              desc="Arijit Singh, Shilpa Rao"
+              link="https://pagalnew.com/download128/43094"
+            />
+            <ListView
+              imgUrl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
+              Title="Zihaal e Miskin"
+              desc="Vishal Mishra - Shreya Ghoshal"
+              link="https://pagalnew.com/download128/42136"
+            />
+            <ListView
+              imgUrl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
+              Title="Heeriye"
+              desc="lorem ipsuim aoskdna,smd;lk aks;as"
+            />
+          </div>
+
           <div className="content">
             <Title titleName="Spotify Popular" />
             <div className="firstrow">

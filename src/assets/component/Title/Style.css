@@ -26,3 +26,14 @@
     align-items: baseline;
   }
 }
+@media (max-width: 425px) {
+  .titleDivStyle {
+    display: none;
+  }
+  .buttonStyle {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+}

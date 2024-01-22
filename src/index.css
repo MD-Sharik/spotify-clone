@@ -175,7 +175,7 @@ body {
   font-weight: bold;
   border: none;
   background: white;
-  padding: 0.8rem 2.2rem;
+  padding: 0.7rem 2.2rem;
   border-radius: 2rem;
   color: #0c0c0c;
 }
@@ -224,7 +224,7 @@ body {
   width: 77%;
   height: 4.5rem;
   color: white;
-  background: #191919;
+  background: linear-gradient(#101010 0%, #101010 100%);
   margin: auto;
   padding: 0 2%;
   border: 0 0 20px 20px;
@@ -252,24 +252,18 @@ body {
 
 @media (max-width: 809px) {
   #mediaplayer {
-    bottom: 0.1rem;
-    width: 88.2%;
+    bottom: 0rem;
+    width: 98.2%;
     height: 8rem;
   }
   .left {
     display: flex;
     width: 10%;
     height: 98.5%;
-    border-radius: 10px;
-    flex-direction: column;
-    justify-content: space-between;
   }
   .right {
-    background: linear-gradient(#292929 0%, #121212 50%);
     width: 90%;
     height: 98.5%;
-    border-radius: 10px;
-    overflow-y: auto;
   }
   #logo1,
   #homeT,
@@ -316,10 +310,19 @@ body {
   }
 }
 @media (max-width: 426px) {
+  #mediaplayer {
+    position: static;
+    bottom: 0rem;
+    width: 98.2%;
+    height: 8rem;
+  }
   .left {
     display: none;
   }
   .right {
     width: 100%;
+  }
+  .content {
+    display: none;
   }
 }

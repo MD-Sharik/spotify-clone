@@ -69,30 +69,32 @@
   }
   .imgStyle {
     height: 9rem;
-    width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-    object-position: center;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
   }
   .imgholder {
-    margin: auto;
-    width: 100%;
-    position: relative;
     height: 10rem;
   }
   .headline {
     font-size: 14px;
-    color: white;
     margin-top: 0rem;
   }
   .descript {
     font-size: 11px;
-    color: #a7a7a7;
-    font-weight: light;
-    margin-top: 0.3rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 425px) {
+  .cardStyle {
+    display: none;
+  }
+  .imgStyle {
+    display: none;
+  }
+  .imgholder {
+    display: none;
+  }
+  .headline {
+    display: none;
+  }
+  .descript {
+    display: none;
   }
 }
