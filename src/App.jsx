@@ -4,8 +4,14 @@ import Title from "./assets/component/Title/Titlename";
 import PlayListCard from "./assets/component/playlistCard";
 import Button from "./assets/component/Buttons/Index";
 import ListView from "./assets/component/ListView/Listview";
+import { useState } from "react";
 
 function App() {
+  const [currentSong, setCurrentSong] = useState(null);
+
+  const handleSongSelect = (song) => {
+    setCurrentSong(song);
+  };
   return (
     <>
       <div className="main">
@@ -143,29 +149,34 @@ function App() {
               Title="Pehle Bhi Main"
               desc="Vishal Mishra"
               link="https://pagalnew.com/download128/44540"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://www.moviesmedia.net/wp-content/uploads/2023/10/tu-hai-kahan-song.jpg"
               Title="Tu Hain Kahan"
               desc="Ahad Khan, Usama Ali, Raffey Anwar"
               link="https://pagalnew.com/download128/44225"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://c.saavncdn.com/415/Satranga-From-ANIMAL-Hindi-2023-20231027131032-500x500.jpg"
               Title="Satranga"
               desc="Arijit Singh, Shreyas Puranik"
               link="https://pagalnew.com/download128/44104"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://i.ytimg.com/vi/zqGW6x_5N0k/maxresdefault.jpg"
               Title="Arjan Vaily"
               desc="Bhupinder Babbal | animal"
               link="https://pagalnew.com/download128/44477"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://i.scdn.co/image/ab67616d0000b2730d3449f333a83a25feb423f8"
               Title="Husn"
               link="https://pagalnew.com/download128/44724"
+              onSelect={handleSongSelect}
               desc="Anuv Jain"
             />
             <ListView
@@ -173,17 +184,20 @@ function App() {
               Title="Chaleya"
               desc="Arijit Singh, Shilpa Rao"
               link="https://pagalnew.com/download128/43094"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg"
               Title="Zihaal e Miskin"
               desc="Vishal Mishra - Shreya Ghoshal"
               link="https://pagalnew.com/download128/42136"
+              onSelect={handleSongSelect}
             />
             <ListView
               imgUrl="https://i.scdn.co/image/ab67616d0000b2734a60872ae145776164540a7f"
               Title="Heeriye"
               desc="lorem ipsuim aoskdna,smd;lk aks;as"
+              onSelect={handleSongSelect}
             />
           </div>
 
@@ -286,23 +300,19 @@ function App() {
           </div>
           <div id="mediaplayer">
             <footer id="playbar">
-              <div className="nameart"></div>
-              <div className="slider"></div>
+              <div className="nameart">
+                {currentSong ? currentSong.title : ""}
+              </div>
+              <div className="slider">
+                <audio
+                  controls
+                  autoPlay
+                  src={currentSong ? currentSong.link : ""}
+                ></audio>
+                <input type="range" value="0" id="progress" />
+              </div>
             </footer>
           </div>
-        </div>
-      </div>
-
-      <div className="loginBanner">
-        <div className="left-down">
-          <h5>PREVIEW OF SPOTIFY</h5>
-          <p>
-            Signup to get unlimited songs and podcasts with ocassional ads. NO
-            credit card needed.
-          </p>
-        </div>
-        <div className="right-down">
-          <Button title="Sign up free" />
         </div>
       </div>
     </>
