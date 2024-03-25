@@ -298,20 +298,21 @@ function App() {
               />
             </div>
           </div>
-          <div id="mediaplayer">
-            <footer id="playbar">
-              <div className="nameart">
-                {currentSong ? currentSong.title : ""}
-              </div>
-              <div className="slider">
-                <audio
-                  controls
-                  autoPlay
-                  src={currentSong ? currentSong.link : ""}
-                ></audio>
-                <input type="range" value="0" id="progress" />
-              </div>
-            </footer>
+          <hr className="hr" />
+          <div className="lastLine">
+            <div className="copyright">
+              <h4>© 2024 Spotify AB</h4>
+            </div>
+            <div className="logos">
+              <a href="https://github.com/MD-Sharik" target="_blank">
+                <img
+                  width="60"
+                  height="60"
+                  src="https://img.icons8.com/ios-glyphs/90/FFFFFF/github.png"
+                  alt="github"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
